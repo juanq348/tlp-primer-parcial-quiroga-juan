@@ -1,7 +1,8 @@
 class Configuracion{
     private static instancia : Configuracion;
+    private modo:{[tipo:string]:string} = {};
 
-    constructor(){}
+    private constructor(){}
 
     public static obtenerInstancia():Configuracion{
         if(!Configuracion.instancia){
@@ -10,13 +11,12 @@ class Configuracion{
         return Configuracion.instancia;
     }
 
-    public set(modo:string):void{
-        
+    public set(modo:string, tipo:string):void{
+        this.modo[modo] = tipo;
     }
 
-    public get(modo:string, produccion:string):string{
-        return `${modo}`
-        return `${produccion}`
+    public get(tipo:string):string{
+        return this.modo[tipo];
     }
 }
 

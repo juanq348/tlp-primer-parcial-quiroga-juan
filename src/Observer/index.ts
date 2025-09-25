@@ -4,7 +4,7 @@ interface Observador{
 
 export class Soporte implements Observador{
     actualizar(nombre:string, tipo:string, estado: string):void{
-        console.log(`\nSoporte notificado: ${nombre} ha cambiado su estado a ${estado}`)
+        console.log(`\nSoporte notificado: ${nombre} ha cambiado su estado a ${estado}\n`)
     }
 }
 
